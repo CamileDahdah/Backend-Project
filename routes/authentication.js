@@ -16,9 +16,13 @@ const endpoints = [
             auth: false,
             validate: {
                 payload: {
-                    name: joi.string().min(5).required(),
+                    firstName: joi.string().min(5).required(),
+                    lastName: joi.string().min(5).required(),
                     email: joi.string().email().required(),
-                    password: joi.string().required()
+                    password: joi.string().required(),
+                    phoneNumber: joi.string().required(),
+                    city: joi.string().required(),
+                    country: joi.string().required()
                 }
             }
         },

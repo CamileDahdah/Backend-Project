@@ -5,7 +5,11 @@ const path = require('path');
 const UserEventSchema = require(path.resolve('models/user_event_schema'))
 
 const UserSchema = new mongoose.Schema({
-    name: {
+
+    firstName: {
+        type: String
+    },
+    lastName: {
         type: String
     },
     email: {
@@ -15,10 +19,19 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String
     },
+    phoneNumber: {
+        type: String,
+    },
+    city: {
+        type: String,
+    },
+    country: {
+        type: String,
+    },
     salt: {
         type: String
-    },
-    events: [UserEventSchema]
+    }
+
 });
 
 UserSchema.pre('save', function (next) {
