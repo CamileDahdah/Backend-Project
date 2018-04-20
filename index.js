@@ -45,11 +45,13 @@ const init = async () => {
     const authenticationRoutes = require(path.resolve('routes/authentication'));
     const profileRoutes = require(path.resolve('routes/profile'));
     const eventsRoutes = require(path.resolve('routes/events'));
+    const tripsRoutes = require(path.resolve('routes/trips'));
 
     routes.push(authenticationRoutes);
     routes.push(profileRoutes);
     routes.push(eventsRoutes);
-
+    routes.push(tripsRoutes);
+    
     routes = _.flatMapDeep(routes, (route) => {
         return route
     });
