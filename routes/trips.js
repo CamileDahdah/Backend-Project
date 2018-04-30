@@ -30,7 +30,7 @@ const endpoints = [
         path: '/trips/search',
         config: {
         
-           // auth: 'jwt',
+           auth: 'jwt',
 
             validate: {
                 query: {
