@@ -2,8 +2,13 @@ const mongoose = require('mongoose');
 
 const TripInfoSchema = new mongoose.Schema({
 
-    weight: {
+
+    email:{
         type: String,
+        required: false
+    },
+    weight: {
+        type: Number,
         required: true
     },
     from_location: {
@@ -11,7 +16,7 @@ const TripInfoSchema = new mongoose.Schema({
         required: true
     },
     from_date: {
-        type: String,
+        type: Intl,
         required: true
     },
     to_location: {
@@ -19,7 +24,7 @@ const TripInfoSchema = new mongoose.Schema({
         required: true
     },
     to_date: {
-        type: String,
+        type: Intl,
         required: true
     },
     observations: {

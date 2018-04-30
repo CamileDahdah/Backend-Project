@@ -39,7 +39,7 @@ const init = async () => {
             verifyOptions: {algorithms: ['HS256']}
         });
 
-    server.auth.default('jwt');
+    //server.auth.default('jwt');
 
     let routes = [];
     const authenticationRoutes = require(path.resolve('routes/authentication'));

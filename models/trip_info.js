@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const TripInfoSchema = new mongoose.Schema({
 
-    email: {
+    email:{
         type: String,
         required: true
     },
@@ -33,7 +33,12 @@ const TripInfoSchema = new mongoose.Schema({
     capacity_volume: {
         type: String,
         required: true
+    },
+    transport: {
+        type: String,
+        required: true
     }
-    
+
+});
 
 module.exports = TripInfoSchema;
