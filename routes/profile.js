@@ -39,7 +39,7 @@ const endpoints = [
                 return Boom.badRequest('bad email');
             }
 
-            return Utils.sanitizeUser(req.user);
+            return Utils.sanitizeUser(user);
 
         }
     }
